@@ -11,6 +11,7 @@ RUN apk add --no-cache \
         libxpm-dev \
         libxslt-dev \
         libzip-dev \
+        postgresql-dev \
         unzip \
     && apk add --no-cache --update --virtual build-deps \
         autoconf \
@@ -24,6 +25,7 @@ RUN apk add --no-cache \
     && pecl install redis-5.2.1 \
     && pecl install xdebug-2.9.4 \
     && docker-php-ext-configure gd \
+    && docker-php-ext-configure pgsql -with-pgsql=/usr/include/postgresql/ \
     && docker-php-ext-install -j$(nproc) \
         bcmath \
         calendar \
@@ -33,6 +35,8 @@ RUN apk add --no-cache \
         opcache \
         sockets \
         pdo_mysql \
+        pdo_pgsql \
+        pgsql \
         xsl \
         zip \
     && docker-php-ext-enable \

@@ -1,0 +1,15 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
+}
+main {
+  flex: 1;
+}
+
+.table {
+  color: white !important;
+}

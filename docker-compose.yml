@@ -24,3 +24,11 @@ services:
       XDEBUG_CONFIG: remote_host=host.docker.internal
     ports:
       - 9000:9000
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: store
+    ports:
+    - 5432:5432
