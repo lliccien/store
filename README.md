@@ -2,13 +2,13 @@
 
 This is a technical test for the PHP Backend Engineer profile
 
-##Pre-Instalació:
+## Pre-Instalació:
 
 El proyecto esta creado con Docker se requiere tener instalado si se quiere usar aun cuando no es indispensable.
 
 si no usa docker debe trner PHP 7.4 o superior instalado, NodeJs y PostgreSQL
 
-##Instalacion:
+## Instalacion:
 
 1.- Clone el repositorio
 
